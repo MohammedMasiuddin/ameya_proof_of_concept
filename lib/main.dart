@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Segoe UI',
       ),
       // home: MyHomePage(title: 'Ameya'),
-      // initialRoute: "/home",
-      initialRoute: "/detail",
+      initialRoute: "/home",
+      // initialRoute: "/detail",
       routes: {
         '/home' : (context) => const MyHomePage(title: "Ameya"),
         '/detail' : (context) => const DetailsView(title: "Ameya")
@@ -61,7 +61,14 @@ class _DetailsViewState extends State<DetailsView> {
                 ElevatedButton(onPressed: (){
                   Navigator.pushNamed(context, '/detail');
                 },
-                    child: Text("Save Participant")),
+
+                  style:ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    shape: const RoundedRectangleBorder( borderRadius: BorderRadius.all(Radius.circular(10))),
+                  ),
+                  child: const Text("Save Overrides"),
+
+                ),
               ],
             ),
           )),

@@ -231,8 +231,12 @@ class _MomentAnalysisOverRideCardState extends State<MomentAnalysisOverRideCard>
                         ),
                         const Text("TDB",style: TextStyle(fontSize: 20.0),),
                       ],
-                    )
-
+                    ),
+                    const Divider(
+                        color: Colors.transparent,
+                        height: 15,
+                        thickness: 2),
+                    Container()
                   ],
                 ))),
       ],
